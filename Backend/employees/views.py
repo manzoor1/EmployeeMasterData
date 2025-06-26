@@ -5,7 +5,7 @@ from .serializers import EmployeeSerializer
 
 @api_view(['POST'])
 def add_employee(request):
-    print("POST DATA:", request.data)
+    # print("POST DATA:", request.data)
     serializer = EmployeeSerializer(data=request.data)
     if serializer.is_valid():
         serializer.save()
