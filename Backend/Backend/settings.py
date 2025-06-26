@@ -46,17 +46,22 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'corsheaders.middleware.CorsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',  
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware', 
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-   
 ]
-CORS_ALLOW_ALL_ORIGINS = True
+
+CORS_ALLOWED_ORIGINS = [
+    "https://employeemasterdata-1.onrender.com",
+    "http://localhost:5173",  # React dev server
+]
+
 ROOT_URLCONF = 'Backend.urls'
 
 TEMPLATES = [
@@ -77,9 +82,9 @@ TEMPLATES = [
 WSGI_APPLICATION = 'Backend.wsgi.application'
 
 import os
-import dj_database_url
+# import dj_database_url
 
-MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+# MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
 
 # Database
 # https://docs.djangoproject.com/en/5.2/ref/settings/#databases
