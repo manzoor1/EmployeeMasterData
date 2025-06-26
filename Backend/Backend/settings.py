@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-ys^o&uuk93(944!10b^z02#xe222#rj+yu*+qiced6@l#2k37w
 DEBUG = False
 
 
-ALLOWED_HOSTS = ['.render.com','.onrender.com','127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['employee-backend.onrender.com','.onrender.com','127.0.0.1', 'localhost']
 
 
 
@@ -57,10 +57,12 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CORS_ALLOWED_ORIGINS = [
-    "https://employeemasterdata-1.onrender.com",
-    "http://localhost:5173",  # React dev server
-]
+CORS_ALLOW_ALL_ORIGINS = True  # Allow all origins for CORS
+
+# CORS_ALLOWED_ORIGINS = [
+#     "https://employeemasterdata-1.onrender.com",
+#     "http://localhost:5173",  # React dev server
+# ]
 
 ROOT_URLCONF = 'Backend.urls'
 
