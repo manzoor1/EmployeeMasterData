@@ -62,7 +62,7 @@ MIDDLEWARE = [
 CORS_ALLOWED_ORIGINS = [
     "https://employeemasterdata-1.onrender.com",
     "http://localhost:5173",
-    "https://employeemasterdata.netlify.app/",  # React dev server
+    "https://employeemasterdata.netlify.app",  # React dev server
 ]
 
 ROOT_URLCONF = 'Backend.urls'
