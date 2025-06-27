@@ -3,7 +3,7 @@ import axios from 'axios';
 import { format } from 'date-fns';
 
 const API_URL = import.meta.env.VITE_API_URL;
-
+// Ensure you have the API URL set in your .env file as VITE_API_URL
 function App() {
   const [form, setForm] = useState({
     employee_id: '',
